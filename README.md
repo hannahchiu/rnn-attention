@@ -1,5 +1,5 @@
 ## Results
 
-![accuracy](img/accuracy.png)
+![accuracy](img/accuracy.PNG)
 
-![tensorboard](img/tensorboard.png)
+![tensorboard](img/tensorboard.PNG)
