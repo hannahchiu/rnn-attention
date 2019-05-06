@@ -1,0 +1,5 @@
+# pycharm settings
+.idea/
+
+# pretrained embedding
+CBOW_iter15_2017-2018.bin
