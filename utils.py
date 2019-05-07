@@ -14,7 +14,8 @@ def get_sentiment_dataset(filename, batch_size, seq_len):
     # Tokenize
     data["text"] = [list(jieba.cut(text)) for text in data["text"]]
     # Map text to sequence of word-integers and pad
-    words = set([word for text in data['text'] for word in text])
+    words = [word for text in data['text'] for word in text]
+    words = sorted(set(words), key=words.index)
     word2idx = {c: i + 1 for i, c in enumerate(words)}
     X = []
     for text in data['text']:

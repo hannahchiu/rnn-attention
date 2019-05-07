@@ -15,4 +15,4 @@ def attention(inputs, attention_size):
     alpha = tf.nn.softmax(uu)
 
     s = tf.reduce_sum(inputs * tf.expand_dims(alpha, -1), 1)
-    return s
+    return s, alpha

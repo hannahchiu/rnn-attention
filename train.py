@@ -43,7 +43,7 @@ class RnnAttention(object):
                                              dtype=tf.float32)
         rnn_outputs = tf.concat((fw_outputs, bw_outputs), axis=2)
         # Attention layer
-        attention_output = attention(rnn_outputs, self.attention_size)
+        attention_output, self.alpha = attention(rnn_outputs, self.attention_size)
         sentence_vector = tf.layers.dropout(attention_output, self.dropout_rate)
 
         self.logits = tf.layers.dense(inputs=sentence_vector, units=self.num_classes, name='logits')

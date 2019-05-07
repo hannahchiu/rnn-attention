@@ -3,3 +3,8 @@
 
 # pretrained embedding
 CBOW_iter15_2017-2018.bin
+
+# model
+model/
+
+__pycache__/
